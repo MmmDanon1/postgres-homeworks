@@ -56,5 +56,5 @@ with open(os.path.join(os.path.dirname(__file__), "employees_data.csv"), newline
     for row in rows:
         print(row)
 
-    cur.close()
-    conn.close()
+cur.close()
+conn.close()
