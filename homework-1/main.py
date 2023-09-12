@@ -12,7 +12,7 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 "Заполнение таблицы orders"
-with open(os.path.join(os.path.dirname(__file__), "orders_data.csv"), newline='') as csvfile:
+with open(os.path.join(os.path.dirname(__file__), "north_data", "orders_data.csv"), newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         order_id = row["order_id"]
@@ -28,7 +28,7 @@ with open(os.path.join(os.path.dirname(__file__), "orders_data.csv"), newline=''
         print(row)
 
 "Заполнение таблицы customers"
-with open(os.path.join(os.path.dirname(__file__), "customers_data.csv"), newline='') as csvfile:
+with open(os.path.join(os.path.dirname(__file__), "north_data", "customers_data.csv"), newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         customer_id = row["customer_id"]
@@ -42,7 +42,7 @@ with open(os.path.join(os.path.dirname(__file__), "customers_data.csv"), newline
         print(row)
 
 "Заполнение таблицы employees"
-with open(os.path.join(os.path.dirname(__file__), "employees_data.csv"), newline='') as csvfile:
+with open(os.path.join(os.path.dirname(__file__), "north_data", "employees_data.csv"), newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         employee_id = row["employee_id"]
