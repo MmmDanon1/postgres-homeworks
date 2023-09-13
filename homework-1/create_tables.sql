@@ -16,7 +16,7 @@ CREATE TABLE mployeese(
 -- Name: customers; Type: TABLE; Schema: public; Owner: -; Tablespace:
 --
 CREATE TABLE customers(
-    customer_id text,
+    customer_id text PRIMARY KEY,
     company_name text
     contact_name text
 );
