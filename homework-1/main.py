@@ -20,7 +20,8 @@ with open(os.path.join(os.path.dirname(__file__), "north_data", "orders_data.csv
         employee_id = row['employee_id']
         order_date = row['order_date']
         ship_city = row['ship_city']
-        cur.execute("INSERT INTO orders VALUES (%s, %s, %s, %s, %s)", (order_id, customer_id, employee_id, order_date, ship_city))
+        cur.execute("INSERT INTO orders VALUES (%s, %s, %s, %s, %s)",
+                    (order_id, customer_id, employee_id, order_date, ship_city))
         cur.execute("SELECT*FROM orders")
         conn.commit()
     rows = cur.fetchall()
@@ -34,7 +35,8 @@ with open(os.path.join(os.path.dirname(__file__), "north_data", "customers_data.
         customer_id = row["customer_id"]
         company_name = row['company_name']
         contact_name = row['contact_name']
-        cur.execute("INSERT INTO customers VALUES (%s, %s, %s)", (customer_id, company_name, contact_name))
+        cur.execute("INSERT INTO customers VALUES (%s, %s, %s)",
+                    (customer_id, company_name, contact_name))
         cur.execute("SELECT*FROM customers")
         conn.commit()
     rows = cur.fetchall()
