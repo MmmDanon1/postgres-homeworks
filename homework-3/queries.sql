@@ -4,7 +4,7 @@
 
 SELECT customers.company_name, CONCAT(employees.first_name, ' ', employees.last_name) as emloeer
 FROM customers
-JOIN employees ON customers.contact_title = employees.title
+JOIN employees USING(city)
 WHERE customers.city IN ('London') AND employees.city IN ('London')
 
 -- 2. Наименование продукта, количество товара (product_name и units_in_stock в табл products),
